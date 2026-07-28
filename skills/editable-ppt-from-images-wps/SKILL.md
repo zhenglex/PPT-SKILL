@@ -1,11 +1,13 @@
 ---
 name: editable-ppt-from-images-wps
-description: Convert PNG/JPG design images or screenshots into layered PowerPoint/WPS decks where the slide visually matches the source image, text is editable, and non-text visual elements are separate movable/replaceable picture objects. Use when the user asks to split image text and elements, separate base image/elements/text, place images into PPT with editable text and draggable elements, replace one slide with a new image using the same method, use WPS/Computer Use for verification, or normalize deck fonts to a user-specified or open CJK font with nearest even font sizes.
+description: Convert PPT source images generated with ChatGPT web, PNG/JPG design images, or screenshots into layered PowerPoint/WPS decks where the slide visually matches the source image, text is editable, and non-text visual elements are separate movable/replaceable picture objects. Use when the user asks to split image text and elements, separate base image/elements/text, place ChatGPT-generated slide images into PPT with editable text and draggable elements, replace one slide with a new image using the same method, use WPS/Computer Use for verification, or normalize deck fonts to a user-specified or open CJK font with nearest even font sizes.
 ---
 
 # Editable PPT From Images WPS
 
 ## Objective
+
+Start by using ChatGPT web (ChatGPT 网页版) to generate the original PPT design images, usually one high-resolution image per slide. Treat those images as the visual source of truth; this skill reconstructs them as editable, layered PPT/WPS slides.
 
 Reconstruct each source image as a PPT slide made from three layer types:
 
@@ -17,7 +19,7 @@ Prioritize visual fidelity. If tiny UI labels, screenshot interface text, icon g
 
 ## Workflow
 
-1. Prepare a task folder under the current project, for example `work/presentations/<slug>/tmp`, and put finished decks in `outputs/`.
+1. Use ChatGPT web first to generate the original PPT design images in slide order, then prepare a task folder under the current project, for example `work/presentations/<slug>/tmp`, and put finished decks in `outputs/`.
 2. Collect source images in slide order. Verify count, dimensions, aspect ratio, and the specific slides the user wants replaced.
 3. Run OCR on each image with RapidOCR or the best available local OCR. Treat OCR as a starting point, not ground truth; inspect Chinese punctuation, dates, and product terms manually.
 4. Build a layer manifest per slide:
