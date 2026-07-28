@@ -1,5 +1,7 @@
 # PPT-SKILL
 
+> **Start here:** First use ChatGPT web (ChatGPT 网页版) to generate the original PPT design images, usually one high-resolution image per slide. This skill then reconstructs those images into a PPT/WPS deck with editable text and movable visual layers.
+
 Reusable Codex skill for reconstructing design images as editable, layered PowerPoint/WPS decks.
 
 ## Included Skill
@@ -17,6 +19,7 @@ Use this skill when a user provides PNG/JPG design images or screenshots and wan
 
 Typical prompts that should trigger the skill:
 
+- "先用 ChatGPT 网页版生成每页 PPT 原始图片，再拆成可编辑 PPT"
 - "把图片中文字和元素拆分，做成 PPT，文字可编辑，元素可拖动"
 - "这页 PPT 换成这张图片，要求底图、元素、文字分开"
 - "最后一页按同样方法替换，其他页不要动"
@@ -25,7 +28,7 @@ Typical prompts that should trigger the skill:
 
 ## Workflow Summary
 
-1. Collect source images in slide order and confirm dimensions/aspect ratio.
+1. Use ChatGPT web first to generate the original PPT design images in slide order, then collect the PNG/JPG files and confirm dimensions/aspect ratio.
 2. Run OCR to identify candidate editable text.
 3. Manually review OCR output for Chinese punctuation, dates, product names, and false positives.
 4. Build a per-slide layer manifest containing:
