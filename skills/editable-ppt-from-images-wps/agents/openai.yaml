@@ -1,0 +1,4 @@
+interface:
+  display_name: "图片分层可编辑PPT"
+  short_description: "把设计图拆成可编辑文字和可移动元素的PPT。"
+  default_prompt: "Use $editable-ppt-from-images-wps to convert supplied design images into a layered PPT with editable text, movable elements, font normalization, and WPS verification."
